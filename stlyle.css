@@ -1,0 +1,517 @@
+:root {
+    --color-fondo: #0a0a0a;
+    --color-texto: #fff;
+    --color-secundario: #ccc;
+    --color-boton: #fff;
+    --color-boton-hover: #ccc;
+}
+
+/* CSS Reset */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo uniforme para todas las secciones */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 0 1rem; /* Espaciado interno lateral */
+}
+
+/* Navbar: Ancho completo */
+.navbar {
+    width: 100%;
+    background-color: #111;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    max-width: 1200px; /* Mantener el contenido centrado */
+    margin: 0 auto;
+}
+
+.navbar a {
+    color: var(--color-secundario) !important;
+}
+
+.navbar a:hover {
+    color: var(--color-texto) !important;
+}
+
+header {
+    padding: 2rem 1rem;
+    background-color: var(--color-fondo);
+}
+
+h1, h3 {
+    color: var(--color-texto); /* Eliminada la coma extra */
+}
+
+h2, h5 {
+    color: rgb(218, 218, 218); /* Agregado el punto y coma */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-texto);
+}
+
+p {
+    color: var(--color-secundario);
+}
+
+/* Secciones: Separación uniforme */
+section {
+    padding: 3rem 1rem;
+    background-color: var(--color-fondo);
+    margin-bottom: 3rem; /* Espaciado entre secciones */
+}
+
+section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre columnas */
+}
+
+section .col-md-6 {
+    flex: 1; /* Cada columna ocupa el 50% del ancho */
+    max-width: 50%; /* Limita el ancho máximo */
+}
+
+section img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+}
+
+@media (max-width: 768px) {
+    section .col-md-6 {
+        max-width: 100%; /* Ocupa el 100% del ancho */
+    }
+
+    section .row {
+        flex-direction: column; /* Apila las columnas */
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.card {
+    background-color: var(--color-fondo);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: var(--color-texto);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.img-uniforme {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    background-color: #f1efef;
+    color: #f8f7f7;
+    border: 2px solid #f3f2f2;
+    padding: 0.75rem;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form .btn {
+    background-color: #080808;
+    color: #faf7f7;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+form .btn:hover {
+    background-color: #9e9a9a;
+}
+
+/* Footer: Ancho completo */
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-texto);
+}
+
+/* Botones */
+.btn {
+    background-color: var(--color-boton);
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--color-boton-hover);
+}
+
+input, textarea {
+    background-color: #222;
+    color: var(--color-texto);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+/* Ajustes para imágenes */
+img {
+    display: block;
+    margin: 0 auto; /* Centrar imágenes */
+}
+
+#sobre-mi .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre columnas */
+}
+
+#sobre-mi .col-md-6 {
+    flex: 1; /* Cada columna ocupa el 50% del ancho */
+    max-width: 50%; /* Limita el ancho máximo */
+}
+
+#sobre-mi img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+}
+
+@media (max-width: 768px) {
+    #sobre-mi .col-md-6 {
+        max-width: 100%; /* Ocupa el 100% del ancho */
+    }
+
+    #sobre-mi .row {
+        flex-direction: column; /* Apila las columnas */
+    }
+}
+
+#blog .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre columnas */
+}
+
+#blog .col-md-6 {
+    flex: 1; /* Cada columna ocupa el 50% del ancho */
+    max-width: 50%; /* Limita el ancho máximo */
+}
+
+#blog img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+}
+
+@media (max-width: 768px) {
+    #blog .col-md-6 {
+        max-width: 100%; /* Ocupa el 100% del ancho */
+    }
+
+    #blog .row {
+        flex-direction: column; /* Apila las columnas */
+    }
+}
+
+/* Blog */
+#blog {
+    padding: 3rem 1rem;
+    background-color: #0e0d0d;
+}
+
+#blog .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#blog h2 {
+    color: var(--color-texto);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#blog h5 {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+#blog p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+#blog img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#blog .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Ajustes para la sección de proyectos */
+#proyectos .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre columnas */
+    justify-content: space-between; /* Distribuir columnas uniformemente */
+}
+
+#proyectos .col-md-4 {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    max-width: 32%; /* Limita el ancho máximo de cada columna */
+    text-align: center; /* Centra el contenido de las columnas */
+}
+
+#proyectos img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-width: 250px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+    margin-bottom: 1rem; /* Espaciado debajo de la imagen */
+}
+
+#proyectos h5 {
+    color: var(--color-texto);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#proyectos p {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    #proyectos .col-md-4 {
+        max-width: 100%; /* Una columna por fila en pantallas pequeñas */
+    }
+
+    #proyectos .row {
+        flex-direction: column; /* Apila las columnas verticalmente */
+    }
+}
+
+/* Sección de Presupuestos */
+#presupuestos {
+    padding: 3rem 1rem;
+    background-color: var(--color-fondo); /* Fondo oscuro */
+    color: var(--color-texto); /* Texto claro */
+    margin-bottom: 3rem; /* Separación con otras secciones */
+}
+
+#presupuestos h2 {
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#presupuestos p {
+    color: var(--color-secundario);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#presupuestos .card {
+    background-color: #1a1a1a; /* Fondo de la tarjeta */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+#presupuestos input, #presupuestos textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 4px;
+    background-color: #222;
+    color: var(--color-texto);
+}
+
+/* Estilo para el campo de subida de archivos */
+#presupuestos input[type="file"] {
+    background-color: #222;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#presupuestos button {
+    background-color: var(--color-boton);
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#presupuestos button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Estilo para la sección de contacto */
+#contacto {
+    padding: 3rem 1rem;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+#contacto h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#contacto p {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+#contacto .card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contacto input, #contacto textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+#contacto button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: #ccc;
+}
+
+/* Servicios */
+#servicios {
+    padding: 3rem 1rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+#servicios h2 {
+    color: var(--color-texto);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#servicios .img-uniforme {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#servicios h5 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+}
+
+#servicios p {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+#servicios button {
+    background-color: var(--color-boton);
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#servicios button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #servicios .col-md-4 {
+        max-width: 100%; /* Una columna por fila en pantallas pequeñas */
+    }
+}
